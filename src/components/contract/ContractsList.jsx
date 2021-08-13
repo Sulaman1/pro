@@ -121,9 +121,9 @@ class ContractsList extends React.Component {
                         )
                     }
                 </List>
-                <div>
+                {/* <div>
                 <Button type="primary" className={styles.addButton} onClick={this.showModal}>Add contract</Button>
-                </div>
+                </div> */}
                 <Modal
                     visible={this.state.modalConfirmationVisible}
                     onOk={this.onConfirmedDelete}

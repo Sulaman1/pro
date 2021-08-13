@@ -3,6 +3,24 @@ import urljoin from 'url-join';
 
 let nodeList = [
     {
+        type: "Fantom",
+        nodes: [
+            {
+                name: "Fantom",
+                key: "Fantom_O",                
+                endpoint: urljoin(config.server.url),
+                id: "250",
+            },
+            // {
+            //     name: "MEW",
+            //     key: "Mainnet_mew",
+            //     endpoint: "https://api.myetherapi.com/eth",
+            //     id: "1",
+            // }
+        ]
+    },
+
+    {
         type: "Mainnet",
         nodes: [
             {

@@ -9,6 +9,7 @@ class Web3Provider {
 
     /**creates web3 contract object using the ABI and address provided */
     getContract(abi, address) {
+      
         let contract = new this.web3.eth.Contract(abi, address);
         if(contract.web3 === undefined) {
             contract.web3 = this.web3;

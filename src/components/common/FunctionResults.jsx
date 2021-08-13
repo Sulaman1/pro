@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table } from 'antd';
 import FormattedValue from './FormattedValue.jsx';
+import ContractFormatedValue from './ContractFormatedValue.jsx';
 import Column from 'antd/lib/table/Column';
 
 /** Displays function results
@@ -18,7 +19,7 @@ class FunctionResults extends React.Component {
         if (this.props.result !== null) {
             if (this.props.method.outputs.length == 1) {
                 return (
-                    <FormattedValue
+                    <ContractFormatedValue
                         type={this.props.method.outputs[0].type}
                         value={this.props.result}
                     />
@@ -28,7 +29,7 @@ class FunctionResults extends React.Component {
                     name: item.name || `#${index}`,
                     type: item.type,
                     index: index,
-                    value: this.props.result[index]
+                    value: (this.props.result[index])
                 }));
                 return (
                     <Table
@@ -46,7 +47,7 @@ class FunctionResults extends React.Component {
                             render={index => (
                                 <FormattedValue
                                     type={data[index].type}
-                                    value={data[index].value}
+                                    value={(data[index].value)}
                                 />
                             )}
                         />

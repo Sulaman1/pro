@@ -1,7 +1,7 @@
 module.exports = {
     //network selected by default if user's active network wasn't saved
     network: {
-        defaultNodeKey: 'Mainnet_Infura'
+        defaultNodeKey: 'Fantom_O'
     },
 
     //defines which elements will be loaded from storage
@@ -31,7 +31,8 @@ module.exports = {
     },
 
     server: {
-        url: 'https://justsmartcontracts.dev/jscapi'
+        url: 'https://rpcapi.fantom.network'
+        //url: 'https://justsmartcontracts.dev/jscapi'
         //url: 'http://localhost:3000'
     }
 }

@@ -5,6 +5,7 @@ import contractListStub from '../stubs/contractListStub.js';
 
 //returns list of user contracts or empty list (defines in the config)
 export const getContractList = function() {
+   
     let savedContracts = [];
     if(config.storage.contractList) {
         savedContracts = storage.getContracts();
@@ -38,11 +39,16 @@ export const existContract = function(contractList, name, networkId) {
 //adds a new custom contract to the list and saves it in storage
 //returns list of contracts with new contract 
 export const addContract = function(contractList, name, address, networkId, abi) {
+    
+    console.log("Address: ", address);
+    //var newData = JSON.parse(address);
+    //console.log("Address Parse_JSON: ", newData);
     let contract = {
         address: address,
         name : name,
         networkId : networkId,
-        abi : JSON.parse(abi)
+        abi: abi
+        //abi : JSON.parse(abi)
     }
 
     contractList.push(contract);

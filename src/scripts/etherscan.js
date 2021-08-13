@@ -41,7 +41,7 @@ export const isPublicNetowrk = networkId => getConfig(networkId).domain != '';
  * Returns etherscan website url
  * @param {*} networkId 
  */
-export const getRootUrl = networkId => `https://${getConfig(networkId).domain}.io/`;
+export const getRootUrl = networkId => `https://${getConfig(networkId).domain}ftmscan.com/`;
 
 /**
  * Returns etherscan url to check specific transaction

@@ -12,10 +12,12 @@ import { getTxHashUrl, getAddressUrl, getRootUrl } from '../../scripts/etherscan
  * address - Ethereum address, if set, points to address page. 
  */
 const EtherscanLink = ({ networkId = 1, txHash, address, children }) => {
+    debugger;
     const url = txHash ? getTxHashUrl(networkId, txHash) :
         address ? getAddressUrl(networkId, address) : getRootUrl(networkId);
 
     const text = txHash || txHash || address || url;
+
 
     return (
         <a href={url} target='_blank'>

@@ -96,17 +96,8 @@ class Center extends React.Component {
             <>
                 <ErrorBoundary>
                     <Row>
+                      
                         <Col span={gridConfig.NetworkSelectSpan}>
-                            <NetworkSelect
-                                activeNodeKey={this.state.activeNodeKey}
-                                nodeList={this.state.nodeList}
-                                onChangeActiveNode={this.changeNode}
-                                onDeleteNode={this.deleteNode}
-                                onAddNewNode={this.addCustomNode}
-                                onEditNode={this.editCustomNode}
-                            />
-                        </Col>
-                        <Col offset={gridConfig.NetworkSelectSpan}>
                             <Menu
                                 onClick={this.handleMenuClick}
                                 theme="light"
@@ -114,12 +105,23 @@ class Center extends React.Component {
                                 defaultSelectedKeys={["browser"]}
                             >
                                 <Menu.Item key="browser">Browser</Menu.Item>
-                                <Menu.Item key="deploy">Deploy</Menu.Item>
+                                {/* <Menu.Item key="deploy">Deploy</Menu.Item>
                                 <Menu.Item key="load">Load Transaction</Menu.Item>
-                                <Menu.Item key="broadcast">Broadcast Transaction</Menu.Item>
+                                <Menu.Item key="broadcast">Broadcast Transaction</Menu.Item> */}
                             </Menu>
                         </Col>
+                        {/* <Col offset={gridConfig.NetworkSelectSpan}>
+                        <NetworkSelect
+                            activeNodeKey={this.state.activeNodeKey}
+                            nodeList={this.state.nodeList}
+                            onChangeActiveNode={this.changeNode}
+                            onDeleteNode={this.deleteNode}
+                            onAddNewNode={this.addCustomNode}
+                            onEditNode={this.editCustomNode}
+                        />
+                    </Col>  */}
                     </Row>
+
                     <div>
                         {this.state.activeMenuKey === "browser" ? <ContractBrowser
                             networkId={node.networkId}
@@ -127,7 +129,7 @@ class Center extends React.Component {
                             visible={this.state.activeMenuKey === "browser"}
                         /> : null
                         }
-                        {this.state.activeMenuKey === "deploy" ? <Deploy
+                        {/* {this.state.activeMenuKey === "deploy" ? <Deploy
                             networkId={node.networkId}
                             endpoint={node.endpoint}
                         /> : null
@@ -140,7 +142,7 @@ class Center extends React.Component {
                             networkId={node.networkId}
                             endpoint={node.endpoint}
                         /> : null
-                        }
+                        } */}
                     </div>
                 </ErrorBoundary>
             </>

@@ -36,16 +36,17 @@ class FormattedValue extends React.Component {
             case 'uint256':
                 return (
                     <>
-                        {this.props.mode == 'e18'
-                            ? convertFromWei(this.props.value.toString(), 'ether')
-                            : this.props.value.toString()
+                        {this.props.mode === "e18"
+                            
+                            ? ((this.props.value))
+                            : ((this.props.value))
                         }
                     </>
                 )
             default:
                 return (
                     <>
-                        {this.props.value.toString()}
+                        { ((this.props.value)/1000000000000000000).toString()}
                     </>
                 );
         }

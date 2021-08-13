@@ -5,6 +5,8 @@ import FunctionResults from '../common/FunctionResults.jsx';
 import {getEtherBalance} from '../../scripts/utils.js';
 import FormattedValue from '../common/FormattedValue.jsx';
 import {makeCancelable} from '../../scripts/promise.js';
+import Web3 from 'web3';
+
 
 const CardTitleSpan = 6;
 
@@ -114,16 +116,16 @@ class ContractPropertiesView extends React.Component {
                         <FormattedValue value={this.props.contract._address} type='address' />
                     </PropertyCard>
                     <PropertyCard title='ETH Balance' titleSpan={CardTitleSpan}>
-                        <FormattedValue value={this.state.eth} type='uint256' mode='e18' />
+                        <FormattedValue value={(this.state.eth)} type='uint256' mode='e18' />
                     </PropertyCard>
                     <Divider></Divider>
                     <List
                         grid={{column: 1}}
                         size='small'
-                        dataSource={this.state.data}
+                        dataSource={(this.state.data)}
                         renderItem={item => (
                             <PropertyCard title={item.method.name} titleSpan={CardTitleSpan}>
-                                <FunctionResults method={item.method} result={item.result}></FunctionResults>
+                                <FunctionResults method={item.method} result={(item.result)}></FunctionResults>
                             </PropertyCard>
                         )}
                     />

@@ -15,17 +15,17 @@ class Header extends React.Component {
       <Row>
         <Col span={12}>
           <p className={styles.headerLogo}>
-            <NavLink to="/">JustSmartContracts</NavLink>
+            <NavLink to="/">ProFTM</NavLink>
           </p>
         </Col>
-        <Col span={6} push={5}>
+        {/* <Col span={6} push={5}>
           <NavLink className={styles.navlink} to="/">
             Home
           </NavLink>
           <NavLink className={styles.navlink} to="/about">
             What is it?
           </NavLink>
-        </Col>
+        </Col> */}
       </Row>
     );
   }

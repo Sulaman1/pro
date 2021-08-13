@@ -29,6 +29,7 @@ class Item extends React.Component {
     }
 
     handleFetchClick(filter) {
+  
         if (this.props.onFetch) {
             this.setState({ loading: true });
             this.props.onFetch(

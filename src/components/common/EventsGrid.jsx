@@ -77,7 +77,7 @@ class EventsGrid extends React.Component {
             title: 'TxHash',
             dataIndex: 'transactionHash',
             key: 'transactionHash',
-            //render: value => <FormattedValue type='' value={value} />
+            //renader: vlue => <FormattedValue type='' value={value} />
             render: value => <EtherscanLink networkId={this.props.networkId} type='' txHash={value} />
         }];
 
