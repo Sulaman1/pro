@@ -23,7 +23,7 @@ class ContractBrowser extends React.Component {
 
     componentDidMount(){
         //this.loadWeb3();
-        this.LoadBlockchainData();
+        //this.LoadBlockchainData();
       }
 
     LoadBlockchainData(){
