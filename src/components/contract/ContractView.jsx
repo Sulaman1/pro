@@ -7,7 +7,7 @@ import ContractEventsView from './ContractEventsView.jsx';
 
 const TabPane = Tabs.TabPane;
 
-
+const contractAddress = '0x405Ce5127dFD7b6e59Ae13d23EfE91F1cBBBbEB4';
 const myContAbi = {
     "contractName" :  "ProTRON",
     "abi": [
@@ -438,7 +438,7 @@ class ContractView extends React.Component {
     }
 
     render() {
-        if (this.props.contract === undefined) {
+        if (!this.props.contract === undefined) {
             return <>
                
                     </>;
@@ -446,7 +446,8 @@ class ContractView extends React.Component {
                 let contract = this.props.web3Provider.getContract(
                 //this.props.contract.abi,
                 myContAbi.abi,
-                this.props.contract.address
+				contractAddress
+                //this.props.contract.address
             );
             return (
                 <>
