@@ -205,7 +205,7 @@ class TransactionParams extends React.Component {
                 <Form.Item>
                     <Radio.Group defaultValue={onlineMode} buttonStyle='solid' onChange={this.handleModeChange}>
                         <Radio.Button value={onlineMode}>Sign now</Radio.Button>
-                        <Radio.Button value={offlineMode}>Sign offline</Radio.Button>
+                        {/* <Radio.Button value={offlineMode}>Sign offline</Radio.Button> */}
                     </Radio.Group>
                 </Form.Item>
 

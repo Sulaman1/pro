@@ -95,7 +95,7 @@ class Center extends React.Component {
         return (
             <>
                 <ErrorBoundary>
-                    <Row>
+                    {/* <Row>
                       
                         <Col span={gridConfig.NetworkSelectSpan}>
                             <Menu
@@ -104,12 +104,12 @@ class Center extends React.Component {
                                 mode="horizontal"
                                 defaultSelectedKeys={["browser"]}
                             >
-                                <Menu.Item key="browser">Browser</Menu.Item>
-                                {/* <Menu.Item key="deploy">Deploy</Menu.Item>
+                                <Menu.Item key="browser"></Menu.Item>
+                                <Menu.Item key="deploy">Deploy</Menu.Item>
                                 <Menu.Item key="load">Load Transaction</Menu.Item>
-                                <Menu.Item key="broadcast">Broadcast Transaction</Menu.Item> */}
+                                <Menu.Item key="broadcast">Broadcast Transaction</Menu.Item>
                             </Menu>
-                        </Col>
+                        </Col> */}
                         {/* <Col offset={gridConfig.NetworkSelectSpan}>
                         <NetworkSelect
                             activeNodeKey={this.state.activeNodeKey}
@@ -120,15 +120,20 @@ class Center extends React.Component {
                             onEditNode={this.editCustomNode}
                         />
                     </Col>  */}
-                    </Row>
+                    {/* </Row> */}
 
                     <div>
-                        {this.state.activeMenuKey === "browser" ? <ContractBrowser
+                    <ContractBrowser
+                            networkId={node.networkId}
+                            endpoint={node.endpoint}
+                            visible={this.state.activeMenuKey === "browser"}
+                        />
+                        {/* {this.state.activeMenuKey === "browser" ? <ContractBrowser
                             networkId={node.networkId}
                             endpoint={node.endpoint}
                             visible={this.state.activeMenuKey === "browser"}
                         /> : null
-                        }
+                        } */}
                         {/* {this.state.activeMenuKey === "deploy" ? <Deploy
                             networkId={node.networkId}
                             endpoint={node.endpoint}

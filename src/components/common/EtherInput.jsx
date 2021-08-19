@@ -75,7 +75,7 @@ class EtherInput extends React.Component {
             <Input
                 value={this.state.value}
                 onChange={this.handleValueChange}
-                addonAfter={selectAfter}
+                //addonAfter={selectAfter}
                 autoComplete='off'
                 {...restProps}
             />

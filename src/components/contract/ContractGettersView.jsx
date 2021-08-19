@@ -42,8 +42,8 @@ class Item extends React.Component {
                             onClick={this.handleClick}
                             inputs={this.props.method.inputs}
                         />
-                    </Col>
-                    <Col span={12}>
+                    {/* </Col>
+                    <Col span={12}> */}
                         {
                             this.state.callResult != null
                                 ? (<Card title='Fetch results' size='small'>

@@ -67,10 +67,10 @@ class FunctionInputs extends React.Component {
                 {
                     this.props.ethInput
                         ? (
-                            <Form.Item label='ETH To Send'>
-                                {getFieldDecorator('ETH', {})(
-                                    <EtherInput defaultMode='ether' />
-                                )}
+                            <Form.Item label='Registration Fee'>
+                                    {getFieldDecorator('ETH', {})(
+                                        <EtherInput defaultMode='ether' />
+                                    )}
                             </Form.Item>
                         ) : null
                 }
